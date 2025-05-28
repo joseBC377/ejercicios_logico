@@ -1,0 +1,11 @@
+%Hechos conexión entre ciudades
+conecta(paris,bruselas).
+conecta(bruselas, ansterdam).
+conecta(ansterdam,frankfurt).
+conecta(frankfurt,munich).
+conecta(munich,zurich).
+conecta(zurish,milan).
+conecta(milan,roma).
+%Reglas para encontrar caminos entre ciudades
+puedeViajar(X,Y):-conecta(X,Y).
+puedeViajar(X,Y):-conecta(X,Z),conecta(Z,Y).
